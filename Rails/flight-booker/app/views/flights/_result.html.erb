@@ -1,0 +1,16 @@
+<h2><%= "#{@flights.count} Flight(s) available(s):" %></h2>
+<h3><%= "Flight from #{@departure.airport_code} to #{@arrival.airport_code} 
+				on the #{params[:flight_date].to_datetime.strftime("%m/%d/%Y")}" %></h3>
+
+<div>
+  
+
+<%= form_for(:booking, url: new_booking_path, html: {method: "get"}) do |f| %>
+  <%= f.hidden_field :passenger_number, :value => params[:passenger_number] %>
+  <% @flights.each do |flight| %>
+    <div><%= f.radio_button(:flight_id, flight.id) %>
+	<%= f.label(:flight_id, "Flight number : #{flight.flight_number} | Departure time : #{flight.departure_time} | Flight duration : #{Time.at(flight.flight_duration).utc.strftime("%H:%M:%S")}") %></div>
+  <% end %>
+  <%= f.submit "Book the flight!" %>
+<% end %>
+</div>

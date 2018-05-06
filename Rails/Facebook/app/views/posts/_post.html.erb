@@ -1,0 +1,30 @@
+<% if post.content %>
+<div>
+
+ <div>Author : <%= post.author.email %> | <%= post.created_at %> |
+ 	<%= link_to 'Edit post', edit_post_path(post) %> | <%= link_to 'Delete post', post_path(post), 
+ 														 :method => :delete %>
+ </div>
+
+ <p><%= post.content%></p>
+
+ <div>
+   <%= post.likes.count %> likes. | 
+   <% if like = post.likes.find_by(:user_id => post.author_id) %>
+     <%= link_to "Je n'aime plus", like_path(like, :post_id => post.id), :method => :delete %>
+   <% else %>
+     <%= link_to "J'aime", likes_path(:post_id => post.id), :method => :post %>
+   <% end %>
+ </div>
+
+ <div>
+   <%= render 'shared/new_comment', post: post %>
+   <%= render post.comments %>
+ </div>
+
+ <p>--------------------</p>
+
+</div>
+<% end %>
+
+

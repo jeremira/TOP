@@ -1,0 +1,23 @@
+<h1>Profile Page</h1>
+<p><%= @user.name %> | <%= @user.email %></p>
+Events organized by <%= @user.name %> :<br>
+To come !
+<ol>
+<% @upcoming_events.each do |event| %>
+  <%= render event %>
+  <% if @user == current_user %>
+	INVITE BUTTON
+  <% end %>
+<% end %>
+</ol>
+Past events :
+<ol>
+<% @prev_events.each do |event| %>
+  <%= render event %>
+<% end %>
+</ol>
+
+<% if @user == current_user %>
+	<%= link_to "Create new event", new_event_path %>
+<% end %>
+

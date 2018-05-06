@@ -1,0 +1,11 @@
+<li>
+  <p>
+  <%= link_to event.name, event_path(event.id) %> | <%= event.place%> | <%= event.moment %> | <%= link_to event.user.name, user_path(event.user.id) %>
+  </p>
+  <p>
+  Will attend this event :
+  <% event.attendee.each do |user| %>
+    <%= user.name %> |
+  <% end %> 
+  </p>
+</li>

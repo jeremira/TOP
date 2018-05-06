@@ -1,0 +1,14 @@
+<h1>Showing all post :</h1>
+------
+<%= @current_user = current_user %>
+-----
+<% @post.each do |p| %>
+<p><%= p.content %> | Writed by : 
+	<% if logged_in? %>
+		<%= p.user.name %> 
+	<% else %>
+		Log in to see author name
+	<% end %>
+<% end %>
+
+<%= link_to "Profile", @current_user %>

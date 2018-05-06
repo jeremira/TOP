@@ -1,0 +1,347 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ------------------------------------------- */
+/* --------------      END OF    ------------- */
+/* ----------------- CSS RESET --------------- */
+/* ------------------------------------------- */
+
+body {
+	font-family: "nyt-cheltenham",georgia,"times new roman",times,serif;
+	color: #333;
+	background-color: #E2E0E0;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.clear_float {
+	display: block;
+	clear: both;
+}
+
+h1 {	
+	font-size: 34px;
+	line-height: 36px;
+	font-family: georgia;
+	font-weight: 700px;
+	}
+
+h3 {
+	font-size: 14px;
+	line-height: 16px;
+	font-family: arial;
+	font-weight: 900;
+}
+
+.right_float {	float: right;	}
+.left_float  {	float: left;	}
+
+
+
+
+
+
+
+
+/* TOP BAR */
+
+nav {
+	margin-left: 10px;
+	display: block;
+	padding: 5px;
+}
+
+nav a {
+	display: inline-block;
+	text-decoration: none;
+	color: #333;
+	font-weight: 900;
+	font-family: arial;
+	font-size: 12px;
+	margin-right: 2px;
+}
+
+#logo {
+	display: block;
+	width: 190px;
+	margin: auto;
+}
+
+#home_btn {
+	position: relative;
+	margin-left: 120px;
+	height: 30px;
+	width: 75px;
+}
+
+#home_btn img {
+	position: absolute;
+	top: 4px;
+	left: 8px;
+}
+
+#home_btn span {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+}
+
+#search_btn {
+	position: relative;
+	height: 30px;
+	width: 85px;
+}
+
+#search_btn img {
+	position: absolute;
+	top: 4px;
+	left: 8px;
+}
+
+#search_btn span {
+	position: absolute;
+	top: 8px;
+	right: 6px;
+}
+
+#sub_btn {
+	height: 30px;
+	width: 115px;
+	background-color: #6288a5;
+	color: #fff;
+	border: 1px solid #e2e2e2;
+}
+
+#sub_btn span {
+	display: block;
+	height: 15px;
+	width: 105px;
+	margin: 9px auto;
+}
+
+#login_btn {
+	margin-left: 5px;
+	height: 30px;
+	width: 65px;
+	background-color: #6288a5;
+	border: 1px solid #e2e2e2;
+	color: #fff;
+}
+
+#login_btn span {
+	display: block;
+	height: 15px;
+	width: 45px;
+	margin: 9px auto;
+}
+
+#setting_btn {
+	margin-top: 8px;
+	margin-left: 5px;
+}
+
+#nav_bar_menu {
+	background-color: #fff;
+}
+
+
+
+
+
+
+
+
+/* TREND BAR */
+
+#trend_bar {
+	height: 82px;
+	background-color: white;
+	border-top: 1px #E2E0E0 solid;
+	border-bottom: 1px #E2E0E0 solid;
+}
+
+
+ol {
+	width: 100%
+	height: 82px;
+}
+
+li {
+	display: inline-block;
+	margin-top: 4px;
+	height: 75px;
+	width: 250px;
+	border-left: 1px #E2E0E0 solid;
+}
+
+li img {
+	height: 75px;
+}
+
+li h3 {
+	float: left;
+	font-size: 30px;
+	font-weight: 300;
+}
+
+li p {
+	float: right;
+	height: 75px;
+	width: 150px;
+	font-size: 16px;
+	line-height: 1.5em;
+	text-transform: capitalize;
+}
+
+
+
+
+
+
+/* MAIN SECTION */
+
+
+section {
+	position: relative;
+	margin-left: 10px;
+	margin-top: 10px;
+	display: block;
+	background-color: #fff;
+	height: 999px;
+	overflow: auto;
+}
+
+section header {
+	width: 90%;
+	margin-left: 5%;
+	border-bottom: 1px #E2E0E0 solid 
+}
+
+#article_container {
+	margin-top: 10px;
+	width: 90%;
+	margin-left: 5%;
+	overflow: auto;
+}
+
+section header h1 {
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+
+#pub_head{
+	width: 90%;
+	height: 90px;
+	margin-left: 5%;
+	display: inline-block;
+	padding: 10px 0;
+	border-bottom: 1px #000 solid;
+}
+
+#pub_head img {
+	display: block;
+	width: 728px;
+	height: 90px;
+	margin: 0 auto;
+}
+
+b {
+	font-weight: 900;
+}
+
+#top_article {
+	border: none;
+}
+
+#top_article p {
+	display: inline;
+	font-size: 14px;
+	font-weight: 300;
+}
+
+#top_article img {
+	float: right;
+}
+
+figure {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+figure img {
+	width: 100%;
+}
+
+figcaption {
+	width: 55%;
+	margin: 10px 0;
+	font-size: 14px;
+}
+
+small {
+	margin: 0 5px;
+	font-size: 0.80em;
+	font-weight: 300;
+}
+
+#first_part article {
+	width: 60%;
+	float: left;
+	font-size: 18px;
+	line-height: 26px;
+}
+
+#first_part aside {
+	width: 30%;
+	padding: 5%;
+	float: left;
+}
+
+#first_part article p {
+	margin: 30px 5% 0 5%;
+}
+

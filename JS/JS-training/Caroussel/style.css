@@ -1,0 +1,152 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul, li {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	list-style-type: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*Border box for everithing*/
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+    -moz-box-sizing: 	border-box;
+         box-sizing:	border-box;
+}
+
+
+
+/* ==============================================
+   ==============================================
+   ==============================================	
+   ==============================================
+=============================================== */
+
+body {
+	background-color: #E2E2E2;
+}
+
+header { 
+	display: block;
+	text-align: center;
+	background-color: #F6F6F6;
+	height: 75px;
+	width: 500px;
+	border: 1px solid #CDCDCD;
+	margin: 20px auto 10px auto;
+}
+
+h1 {
+	font-size: 18px;
+	font-weight: bolder;
+	margin-top: 10px;
+	margin-bottom: 5px;
+}
+
+h6 {
+	font-size: 12px;
+	font-weight: lighter;
+	color: #707070;
+}
+
+
+#container {
+	position: relative;
+	display: block;
+	width: 400px;
+	height: 300px;
+	margin: 50px auto;
+}
+
+#slider {
+	display: block;
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	left: 50px;
+	top: 0;
+	overflow: hidden;
+}
+
+img {
+	height: 300px;
+	width: 300px;
+	position: absolute;
+	top: 0;
+}
+
+
+span {
+	display: block;
+	background-color: #D1D1D1;
+	border: 2px solid #BABABA;
+	width: 50px;
+	height: 50px;
+	position: absolute;
+	top: 125px;
+}
+
+
+#next {
+ 	right: 0px;
+}
+
+#dotwrapper {
+	display: block;
+	height: 25px;
+	width: 150px;
+	position: absolute;
+	top: 260px;
+	left: 125px;
+}
+
+nav {
+	display: inline-block;
+	height: 11px;
+	width: 11px;
+	background-color: black;
+	margin: 1px 5px;
+}

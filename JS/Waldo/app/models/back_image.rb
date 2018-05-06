@@ -1,0 +1,2 @@
+class BackImage < ApplicationRecord
+end

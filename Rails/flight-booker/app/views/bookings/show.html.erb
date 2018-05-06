@@ -1,0 +1,17 @@
+<h1>Flight succesfully booked !</h1>
+
+<h3>Confirmation details</h3>
+<div>
+  <p>Flight <%= @flight.flight_number %> </p>
+  <p>Depart : <%= @flight.departure_time.strftime("%m/%d/%Y") %> at <%= @flight.departure_time.strftime("%H:%M") %> From <%= @flight.departure_airport.airport_code %></p>
+  <p>Arrival : <%= (@flight.departure_time+@flight.flight_duration).strftime("%m/%d/%Y") %> at <%= (@flight.departure_time+@flight.flight_duration).strftime("%Hh%M") %> in <%= @flight.arrival_airport.airport_code %></p>
+</div>
+<div>
+Passenger(s) for this flight :
+<ul>
+ <% @booking.passenger.each do |passenger| %>
+   <li><%= passenger.name %> | <%= passenger.email %></li>
+ <% end %>
+</ul>
+</div>
+

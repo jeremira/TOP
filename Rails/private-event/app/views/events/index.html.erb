@@ -1,0 +1,14 @@
+<h1>All events</h1>
+
+To come !
+<ol>
+<% @upcoming_events.each do |event| %>
+  <%= render event %>
+<% end %>
+</ol>
+Past events :
+<ol>
+<% @prev_events.each do |event| %>
+  <%= render event %>
+<% end %>
+</ol>

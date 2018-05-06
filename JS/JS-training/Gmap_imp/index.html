@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Google map location</title>
+  </head>
+  <body>
+
+
+<div id="container">
+  <header>
+    <form>
+      <input id="latitude"  name="latitude"  placeholder="Enter latitude"  />
+      <input id="longitude" name="longitude" placeholder="Enter longitude" />
+      <input id="message"   name="message"  placeholder="Enter a message"  />
+      <input id="submit"    type="submit"    value="Go there !" />
+    </form>
+  </header>
+
+  <section>    
+    <div id="map"></div>
+  </section>
+</div>
+
+  </body>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCR6C979Ho1Og0qs-LZympGcFTS8craAV0&callback=initMap">
+    </script>
+    <script src="main.js"></script>
+</html>

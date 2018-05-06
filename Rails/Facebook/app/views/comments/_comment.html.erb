@@ -1,0 +1,7 @@
+<div>
+  <% if comment.content %>
+    <%= comment.content %> by <%= User.find(comment.user_id).email %>
+    <%= link_to 'Edit', edit_comment_path(comment) %> | <%= link_to 'Delete', comment_path(comment), 
+ 														 :method => :delete %>
+  <% end %>
+</div>

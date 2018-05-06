@@ -1,0 +1,23 @@
+<% if user_signed_in? %>
+
+  <h3>Welcome <%= current_user.email %></h3>
+  <ul class = "nav navbar-nav navbar-right">
+    <li><%= link_to "Profile",   current_user %></li>
+    <li><%= link_to "Find friends",   users_path %></li>
+    <li><%= link_to "Log out", destroy_user_session_path, method: "delete" %></li>
+  </ul>
+
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+    Pending friends(<%= @pending_friends.count %>)<b class="caret"></b>
+  </a>
+  <ul class="dropdown-menu">
+    <%= render @pending_friends %>
+    <li class="divider"></li>
+  </ul>
+  </li>
+
+<% else %>
+  Please <%= link_to "Log in", new_user_session_path %> or <%= link_to "Sign in", new_user_registration_path %>
+<% end %>
+

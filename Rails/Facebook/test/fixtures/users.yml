@@ -1,0 +1,9 @@
+babar:
+  id: 1
+  email: babar@aol.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+
+kakoo:
+  id: 2
+  email: kakoo@aol.com
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>

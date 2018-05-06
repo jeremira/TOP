@@ -1,0 +1,29 @@
+<h1>Book flight</h1>
+
+<div>
+  Flight information : 
+  <p>Flight number : <%= @flight.flight_number %> | 
+   Departure date :<%= @flight.departure_time.strftime("%m/%d/%Y") %></p>
+  <p>From : <%= @flight.departure_airport.airport_code %> To : <%= @flight.arrival_airport.airport_code %> </p>
+  <p>Departure time : <%= @flight.departure_time.strftime("%H:%M") %> | Flight duration : <%= Time.at(@flight.flight_duration).utc.strftime("%Hh%M") %></p>
+</div>
+
+<div>
+  <%= form_for @booking do |f| %>
+    <%= f.hidden_field :flight_id, 		  :value => @booking.flight_id %>
+    <%= f.hidden_field :passenger_number, :value => @booking.passenger_number %>
+   <ul>
+    <%= f.fields_for :passenger do |passenger_f| %>
+      <li>
+        <%= passenger_f.label :name %>
+        <%= passenger_f.text_field :name %>
+        <%= passenger_f.label :email %>
+        <%= passenger_f.email_field :email %>
+      </li>
+    <% end %>
+   </ul>
+   <%= f.submit "Book the flight !" %>
+  <% end %>
+</div>
+
+

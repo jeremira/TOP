@@ -1,0 +1,28 @@
+<h1>Search flights</h1>
+<div>
+  <%= form_tag("/flights", method: "get") do %> 
+
+  	<%= label_tag(:departure_airport_id, "Departure airport") %>
+    <%= select_tag(:departure_airport_id,
+    				options_for_select(@departure_airports_options)) %>
+
+    <%= label_tag(:arrival_airport_id, "Arrival airport") %>				
+    <%= select_tag(:arrival_airport_id,
+    				options_for_select(@arrival_airports_options)) %>
+
+    <%= label_tag(:passenger_number, "Passenger number") %>					
+    <%= select_tag(:passenger_number,
+    				options_for_select([["1",1],["2",2],["3",3],["4",4]])) %>
+
+    <%= label_tag(:flight_date, "Flight date") %>					
+    <%= select_tag(:flight_date,
+    				options_for_select(@flight_dates_options)) %>
+
+    <%= submit_tag("Search") %>				
+  <% end %>								
+</div>
+
+  <%= render 'result.html' if @flights %>
+
+<div>
+  

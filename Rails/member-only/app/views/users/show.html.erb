@@ -1,0 +1,10 @@
+<%= @user.name %> profile page<br>
+Post :<br>
+<% @post.each do |p| %>
+	<%= p.content %>
+<% end %>
+
+<%= link_to "New post", new_post_path %>
+
+<%= link_to "Log out", logout_path %><br>
+<%= link_to "Retour Index", posts_path %>

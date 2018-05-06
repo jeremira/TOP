@@ -1,0 +1,13 @@
+
+<div>
+<% if logged_in? %>
+ <%= link_to "Profile", user_path(id: current_user.id) %> | 
+<% else %>
+ <%= link_to "Log in", root_path %> | 
+<% end %>
+<%= link_to "All users", users_path %> | 
+<%= link_to "All events", events_path %>
+</div>
+<div> 
+<%= current_user.name %>
+</div>
